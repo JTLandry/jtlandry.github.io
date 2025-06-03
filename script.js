@@ -95,27 +95,31 @@ const resumeData = {
         ]
     },
     hobbies: {
-        "Gaming": [
-            {
-                name: "Magic: The Gathering",
-                description: "Collecting and playing Magic: The Gathering, with a focus on Commander format and collecting unique art styles.",
-                image: "/mtg-card-back.jpg"
-            },
-            {
-                name: "Weiss Schwarz",
-                description: "Playing and collecting Weiss Schwarz cards, particularly anime series like Monogatari and RWBY sets.",
-                image: "/weiss-card-back.png"
-            },
-            {
-                name: "Union Arena",
-                description: "Recently started collecting Union Arena cards, focusing on series like Bleach and One Punch Man.",
-                image: "/union-card-back.jpg"
-            },
-            {
-                name: "Video Games",
-                description: "Enjoying various games including the Pokémon series, League of Legends, Destiny 2, and Final Fantasy VII"
-            }
-        ],
+        "Gaming": {
+            "Card Games": [
+                {
+                    name: "Magic: The Gathering",
+                    description: "Collecting and playing Magic: The Gathering, with a focus on Commander format and collecting unique art styles.",
+                    image: "images/mtg-card-back.jpg"
+                },
+                {
+                    name: "Weiss Schwarz",
+                    description: "Playing and collecting Weiss Schwarz cards, particularly anime series like Monogatari and RWBY sets.",
+                    image: "images/weiss-card-back.jpg"
+                },
+                {
+                    name: "Union Arena",
+                    description: "Recently started collecting Union Arena cards, focusing on series like Bleach and One Punch Man.",
+                    image: "images/union-card-back.jpg"
+                }
+            ],
+            "Video Games": [
+                {
+                    name: "Video Games",
+                    description: "Enjoying various games including the Pokémon series, League of Legends, Destiny 2, and Final Fantasy VII"
+                }
+            ]
+        },
         "Entertainment": [
             {
                 name: "Reading",
@@ -232,7 +236,7 @@ function populateHobbies() {
     hobbiesContainer.innerHTML = '';
     
     // Iterate through each hobby category
-    for (const [category, items] of Object.entries(resumeData.hobbies)) {
+    for (const [category, content] of Object.entries(resumeData.hobbies)) {
         const categoryElement = document.createElement('div');
         categoryElement.className = 'hobby-group';
         
@@ -242,37 +246,60 @@ function populateHobbies() {
         categoryHeader.textContent = category;
         categoryElement.appendChild(categoryHeader);
         
-        // Add items for this category
+        // Add items container
         const itemsContainer = document.createElement('div');
         itemsContainer.className = 'hobby-items-container';
         
-        items.forEach(item => {
-            const hobbyElement = document.createElement('div');
-            hobbyElement.className = item.image ? 'hobby-item with-image' : 'hobby-item';
-            
-            if (item.image) {
-                const img = document.createElement('img');
-                img.src = item.image;
-                img.alt = `${item.name} card back`;
-                img.className = 'card-image';
-                hobbyElement.appendChild(img);
+        // Handle nested structure for Gaming category
+        if (category === "Gaming") {
+            for (const [subCategory, items] of Object.entries(content)) {
+                // Add subcategory header
+                const subCategoryHeader = document.createElement('h4');
+                subCategoryHeader.className = 'subcategory-header';
+                subCategoryHeader.textContent = subCategory;
+                itemsContainer.appendChild(subCategoryHeader);
                 
-                const content = document.createElement('div');
-                content.className = 'content';
-                content.innerHTML = `
-                    <h4>${item.name}</h4>
-                    <p>${item.description}</p>
-                `;
-                hobbyElement.appendChild(content);
-            } else {
+                // Add items for this subcategory
+                items.forEach(item => {
+                    const hobbyElement = document.createElement('div');
+                    hobbyElement.className = item.image ? 'hobby-item with-image' : 'hobby-item';
+                    
+                    if (item.image) {
+                        const img = document.createElement('img');
+                        img.src = item.image;
+                        img.alt = `${item.name} card back`;
+                        img.className = 'card-image';
+                        hobbyElement.appendChild(img);
+                        
+                        const content = document.createElement('div');
+                        content.className = 'content';
+                        content.innerHTML = `
+                            <h4>${item.name}</h4>
+                            <p>${item.description}</p>
+                        `;
+                        hobbyElement.appendChild(content);
+                    } else {
+                        hobbyElement.innerHTML = `
+                            <h4>${item.name}</h4>
+                            <p>${item.description}</p>
+                        `;
+                    }
+                    
+                    itemsContainer.appendChild(hobbyElement);
+                });
+            }
+        } else {
+            // Handle regular category items
+            content.forEach(item => {
+                const hobbyElement = document.createElement('div');
+                hobbyElement.className = 'hobby-item';
                 hobbyElement.innerHTML = `
                     <h4>${item.name}</h4>
                     <p>${item.description}</p>
                 `;
-            }
-            
-            itemsContainer.appendChild(hobbyElement);
-        });
+                itemsContainer.appendChild(hobbyElement);
+            });
+        }
         
         categoryElement.appendChild(itemsContainer);
         hobbiesContainer.appendChild(categoryElement);
