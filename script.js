@@ -97,8 +97,19 @@ const resumeData = {
     hobbies: {
         "Gaming": [
             {
-                name: "Card Games",
-                description: "Playing and collecting trading card games including Magic: The Gathering, Weiss Schwarz, and Union Arena"
+                name: "Magic: The Gathering",
+                description: "Collecting and playing Magic: The Gathering, with a focus on Commander format and collecting unique art styles.",
+                image: "images/mtg-card-back.jpg"
+            },
+            {
+                name: "Weiss Schwarz",
+                description: "Playing and collecting Weiss Schwarz cards, particularly anime series like Monogatari and RWBY sets.",
+                image: "images/weiss-card-back.jpg"
+            },
+            {
+                name: "Union Arena",
+                description: "Recently started collecting Union Arena cards, focusing on series like Bleach and One Punch Man.",
+                image: "images/union-card-back.jpg"
             },
             {
                 name: "Video Games",
@@ -237,11 +248,29 @@ function populateHobbies() {
         
         items.forEach(item => {
             const hobbyElement = document.createElement('div');
-            hobbyElement.className = 'hobby-item';
-            hobbyElement.innerHTML = `
-                <h4>${item.name}</h4>
-                <p>${item.description}</p>
-            `;
+            hobbyElement.className = item.image ? 'hobby-item with-image' : 'hobby-item';
+            
+            if (item.image) {
+                const img = document.createElement('img');
+                img.src = item.image;
+                img.alt = `${item.name} card back`;
+                img.className = 'card-image';
+                hobbyElement.appendChild(img);
+                
+                const content = document.createElement('div');
+                content.className = 'content';
+                content.innerHTML = `
+                    <h4>${item.name}</h4>
+                    <p>${item.description}</p>
+                `;
+                hobbyElement.appendChild(content);
+            } else {
+                hobbyElement.innerHTML = `
+                    <h4>${item.name}</h4>
+                    <p>${item.description}</p>
+                `;
+            }
+            
             itemsContainer.appendChild(hobbyElement);
         });
         
