@@ -35,7 +35,7 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
 }
 
 .navbar .container {
@@ -84,6 +84,9 @@ body {
 @media (max-width: 768px) {
     .navbar {
         position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 
     .navbar .container {
@@ -141,7 +144,7 @@ body {
     }
 
     .hero {
-        padding-top: 5rem;
+        padding-top: 7rem;
     }
 }
 
@@ -150,6 +153,7 @@ body {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     padding: 8rem 0 4rem;
+    margin-top: 0;
 }
 
 .profile-header {
