@@ -60,6 +60,8 @@ body {
     cursor: pointer;
     padding: 0.5rem;
     transition: color 0.3s;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .nav-toggle:hover {
@@ -100,7 +102,8 @@ body {
 
     .nav-toggle {
         display: block;
-        z-index: 2;
+        visibility: visible;
+        opacity: 1;
     }
 
     .nav-links {
