@@ -355,6 +355,25 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.hobby-item.with-image {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.hobby-item .card-image {
+    width: 100px;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.hobby-item .content {
+    flex: 1;
+}
+
 .hobby-item h4 {
     color: var(--secondary-color);
     margin-bottom: 0.8rem;
@@ -500,8 +519,15 @@ footer {
         padding: 1rem;
     }
 
-    .hobby-item {
-        padding: 1rem;
+    .hobby-item.with-image {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .hobby-item .card-image {
+        width: 80px;
+        height: 112px;
     }
 
     html {
