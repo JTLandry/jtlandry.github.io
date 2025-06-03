@@ -77,7 +77,7 @@ body {
 
 /* Global scroll padding for fixed header */
 html {
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 6.5rem;
     scroll-behavior: smooth;
 }
 
@@ -88,11 +88,11 @@ html {
     padding: 2.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 6.5rem;
 }
 
 .section:first-of-type {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .section h2 {
@@ -109,7 +109,7 @@ html {
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
-    padding-top: 7rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
     margin-bottom: 2rem;
 }
