@@ -75,12 +75,43 @@ body {
     color: var(--accent-color);
 }
 
+/* Global scroll padding for fixed header */
+html {
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+/* Main Content */
+.section {
+    background-color: var(--white);
+    margin: 2rem 0;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    scroll-margin-top: 5rem;
+}
+
+.section:first-of-type {
+    margin-top: 1rem;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    padding-top: 0.5rem;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     padding-top: 7rem;
     padding-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .profile-header {
@@ -147,24 +178,6 @@ body {
 
 .contact-info a:hover {
     color: var(--accent-color);
-}
-
-/* Main Content */
-.section {
-    background-color: var(--white);
-    margin: 2rem 0;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.section h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.8rem;
 }
 
 /* Experience Items */
@@ -404,6 +417,8 @@ footer {
 
     .hero {
         padding-top: 5rem;
+        padding-bottom: 3rem;
+        margin-bottom: 1rem;
     }
 
     .profile-header {
@@ -448,6 +463,8 @@ footer {
     }
 
     .section {
+        scroll-margin-top: 4rem;
+        margin: 1rem 0;
         padding: 1.5rem;
     }
 
@@ -485,5 +502,9 @@ footer {
 
     .hobby-item {
         padding: 1rem;
+    }
+
+    html {
+        scroll-padding-top: 4rem;
     }
 } 
