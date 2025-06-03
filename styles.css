@@ -31,11 +31,11 @@ body {
 .navbar {
     background-color: var(--primary-color);
     padding: 1rem 0;
-    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
 }
 
 .navbar .container {
@@ -53,15 +53,6 @@ body {
 
 .nav-toggle {
     display: none;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    transition: color 0.3s;
-    visibility: hidden;
-    opacity: 0;
 }
 
 .nav-toggle:hover {
@@ -102,8 +93,13 @@ body {
 
     .nav-toggle {
         display: block;
-        visibility: visible;
-        opacity: 1;
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: color 0.3s;
     }
 
     .nav-links {
@@ -145,7 +141,7 @@ body {
     }
 
     .hero {
-        padding-top: 6rem;
+        padding-top: 5rem;
     }
 }
 
