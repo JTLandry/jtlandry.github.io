@@ -99,17 +99,17 @@ const resumeData = {
             {
                 name: "Magic: The Gathering",
                 description: "Collecting and playing Magic: The Gathering, with a focus on Commander format and collecting unique art styles.",
-                image: "mtg-card-back.jpg"
+                image: "/mtg-card-back.jpg"
             },
             {
                 name: "Weiss Schwarz",
                 description: "Playing and collecting Weiss Schwarz cards, particularly anime series like Monogatari and RWBY sets.",
-                image: "weiss-card-back.png"
+                image: "/weiss-card-back.png"
             },
             {
                 name: "Union Arena",
                 description: "Recently started collecting Union Arena cards, focusing on series like Bleach and One Punch Man.",
-                image: "union-card-back.jpg"
+                image: "/union-card-back.jpg"
             },
             {
                 name: "Video Games",
