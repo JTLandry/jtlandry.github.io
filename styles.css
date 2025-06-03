@@ -387,6 +387,18 @@ footer {
     line-height: 1.5;
 }
 
+.subcategory-header {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.subcategory-header:first-child {
+    margin-top: 0;
+}
+
 /* Mobile Navigation */
 @media (max-width: 768px) {
     .nav-toggle {
@@ -517,6 +529,7 @@ footer {
 
     .hobby-items-container {
         padding: 1rem;
+        gap: 1rem;
     }
 
     .hobby-item.with-image {
@@ -528,6 +541,11 @@ footer {
     .hobby-item .card-image {
         width: 80px;
         height: 112px;
+    }
+
+    .subcategory-header {
+        font-size: 1.2rem;
+        margin: 1rem 0 0.8rem;
     }
 
     html {
