@@ -365,9 +365,11 @@ footer {
     width: 100px;
     height: 140px;
     flex-shrink: 0;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+    object-fit: contain;
+    background-color: var(--light-gray);
+    padding: 4px;
 }
 
 .hobby-item .content {
@@ -541,6 +543,7 @@ footer {
     .hobby-item .card-image {
         width: 80px;
         height: 112px;
+        margin: 0 auto;
     }
 
     .subcategory-header {
