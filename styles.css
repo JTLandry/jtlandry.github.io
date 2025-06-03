@@ -22,7 +22,446 @@ body {
 }
 
 .container {
+    max-width: 1200px;:root {
+    --primary-color: #1a4f7a;
+    --secondary-color: #2e86de;
+    --accent-color: #54a0ff;
+    --text-color: #2d3436;
+    --light-gray: #f6f8fa;
+    --white: #ffffff;
+    --dark-gray: #636e72;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+}
+
+.container {
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .name {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 8rem 0 4rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    text-align: left;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--light-gray);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% 10%;
+}
+
+.profile-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.contact-info a, .contact-info span {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content */
+.section {
+    background-color: var(--white);
+    margin: 2rem 0;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+}
+
+/* Experience Items */
+.experience-item, .education-item, .leadership-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.experience-item:last-child, .education-item:last-child, .leadership-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-item h3, .education-item h3, .leadership-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.experience-item .date, .education-item .date, .leadership-item .date {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item .description {
+    white-space: pre-line;
+    padding-left: 20px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.skill-item {
+    background-color: var(--light-gray);
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Certifications */
+.certifications ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.certifications li {
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    background-color: var(--light-gray);
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.certifications li:hover {
+    transform: translateX(5px);
+}
+
+/* Leadership Items */
+.leadership-items {
+    display: grid;
+    gap: 2rem;
+}
+
+.organization-group {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.organization-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.roles-container {
+    padding: 1.5rem;
+    background-color: var(--light-gray);
+    display: grid;
+    gap: 1.5rem;
+}
+
+.leadership-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.role-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.leadership-item .date {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.leadership-item p {
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+/* About section */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+/* Hobbies Section */
+.hobbies-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.hobby-group {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.category-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.hobby-items-container {
+    padding: 1.5rem;
+    background-color: var(--light-gray);
+    display: grid;
+    gap: 1.5rem;
+}
+
+.hobby-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hobby-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hobby-item p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+    }
+
+    .hero {
+        padding-top: 12rem;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        margin-top: 1rem;
+    }
+
+    .profile-info {
+        text-align: center;
+    }
+
+    .hero h1, .hero h2 {
+        text-align: center;
+    }
+
+    .contact-info {
+        justify-content: center;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .nav-links {
+        margin-top: 0.5rem;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .role-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .organization-header {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
+    }
+    
+    .roles-container {
+        padding: 1rem;
+    }
+    
+    .leadership-item {
+        padding: 1rem;
+    }
+
+    .category-header {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .hobby-items-container {
+        padding: 1rem;
+    }
+
+    .hobby-item {
+        padding: 1rem;
+    }
+} 
     margin: 0 auto;
     padding: 0 20px;
 }
