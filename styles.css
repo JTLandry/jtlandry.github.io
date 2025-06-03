@@ -70,6 +70,8 @@ body {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+    visibility: visible;
+    opacity: 1;
 }
 
 .nav-links a {
@@ -102,7 +104,8 @@ body {
     }
 
     .nav-links {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
         position: absolute;
         top: 100%;
         left: 0;
@@ -113,9 +116,12 @@ body {
         gap: 0;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         width: 100%;
+        transition: visibility 0.3s, opacity 0.3s;
     }
 
     .nav-links.active {
+        visibility: visible;
+        opacity: 1;
         display: flex;
     }
 
