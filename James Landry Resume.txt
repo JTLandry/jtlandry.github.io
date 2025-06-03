@@ -1,0 +1,64 @@
+﻿James Landry 
+Carrollton, TX ● james.t.landry@protonmail.com ● 832-715-2440 ● linkedin.com/in/james-t-landry
+Summary
+Detail-oriented and adaptable Azure Engineer and Site Reliability Engineer (SRE) with strong experience in cloud technologies, automation, and troubleshooting. Proficient in CI/CD, incident management, and infrastructure management using Microsoft Azure, Terraform, and related tools. Experienced with a variety of programming languages and committed to continuous learning.
+Professional Experience
+Azure Engineer / Site Reliability Engineer          
+PwC (Contract: SkillStorm)
+August 2022 - November 2024
+* Managed and optimized Azure DevOps pipelines to streamline CI/CD deployments and automate workflows.
+* Monitored application health and performance using Azure Portal and Application Insights; identified and resolved system issues.
+* Automated SSL/TLS certification tracking for critical applications, reducing downtime risks.
+* Delivered on-call incident response through PagerDuty, ensuring rapid resolution and high system availability.
+* Architected and deployed scalable infrastructure using Azure Traffic Manager, VM Scale Sets, and Load Balancers.
+* Developed Infrastructure as Code (IaC) with Terraform, creating reusable modules to enforce environment consistency.
+* Administered and fine-tuned Azure networking configurations to enhance performance and security.
+* Created and presented system architecture diagrams and progress updates to stakeholders using draw.io.
+* Implemented monitoring and alerting with DataDog to proactively detect and resolve issues.
+* Utilized ServiceNow for change management, incident tracking, and emergency response workflows.
+* Applied Python scripting for cloud automation tasks and supported container orchestration using Kubernetes.
+
+
+Masters of Science in Computer Science
+The University of Texas at Dallas, Richardson, TX 
+August 2020 - May 2022
+
+
+* 9 hours from completion
+Projects
+* Developed a Python-based Rock, Paper, Scissors game with a CPU opponent, incorporating functionality to track win/loss/tie statistics and displaying a win percentage. Enhanced the user experience by handling input errors and providing clear feedback.
+* Used various AI tools to create a GUI version of Reversi in Python. Code was reviewed before use to check for errors.The code was iteratively updated with new features.
+Education
+Bachelor of Science in Computer Science
+The University of Texas at Dallas, Richardson, TX 
+August 2016 - May 2020
+
+
+Certifications
+Microsoft Azure AZ-900 – Fundamentals
+Microsoft Azure AZ-104 – Administrator
+Google IT Support Professional
+
+
+Technical Skills
+Java, Python, C/C++, C#, SQL, HTML5, JavaScript, PHP, Microsoft Azure, Google Cloud Platform, Azure DevOps, Terraform, Datadog, PagerDuty, MySQL, MongoDB, Application Insights, Datadog, PagerDuty,  Load Balancing, Traffic Manager, Virtual Machines, Scale Sets, ServiceNow, Kubernetes
+
+
+Leadership & Extracurricular Activities
+Computer Security Group
+Member
+2018 - 2020
+The Pokemon League at UT Dallas
+Secretary 
+Spring 2017 - Spring 2018
+Managed meeting notes and event communications.
+President 
+Spring 2018 - Fall 2021
+Led meetings and liaised with the Student Organization Center.
+A3 (Anime Club)
+Fundraising Coordinator 
+Fall 2018 - Spring 2021
+Organized and led fundraising efforts for the club.
+Vice President 
+Spring 2021 - Fall 2021
+Managed meetings in the absence of the President.
