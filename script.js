@@ -105,7 +105,7 @@ const resumeData = {
                 {
                     name: "Weiss Schwarz",
                     description: "Playing and collecting Weiss Schwarz cards, particularly anime series like Monogatari and RWBY sets.",
-                    image: "/weiss-card-back.jpg"
+                    image: "/weiss-card-back.png"
                 },
                 {
                     name: "Union Arena",
